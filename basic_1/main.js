@@ -23,16 +23,30 @@ function setup() {
 // runs every frame
 function draw() {
   background(0,0,255);
+
+for (var i=0; i<20; i++) {
+  fill(30 + i*20, 255-i*10, 50);
+  textSize(i*12);
+  text('whaaatt', i*10, i*10);
+
+}
+
+
+
   fill(255, 255, 255);
 
   // https://p5js.org/reference/#/p5/ellipse
-  ellipse(50, 50, 80, 80);
+  ellipse(50, 50, 150, 5);
+
+
+  resetMatrix();
+
 
   // https://p5js.org/reference/#/p5/fill
   fill(255, 204, 0);
 
   // https://p5js.org/reference/#/p5/rect
-  rect(30, 20, 55, 55);
+  rect(100, 70, 55, 55);
 
   fill(255, 100, 0);
   rotate(0.1);
@@ -45,7 +59,7 @@ function draw() {
   // rendering text
   fill(255, 204, 0);
   textSize(32);
-  text('word', centerX, centerY);
+  text('canard', centerX, centerY);
 
   // render the image at x=125, y=200
   image(duck, 125, 200);
